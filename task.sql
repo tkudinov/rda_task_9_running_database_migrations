@@ -47,8 +47,8 @@ CREATE TABLE Users (
     EMail VARCHAR(50),
     PRIMARY KEY (ID)
 );
---rollback DROP TABLE Users
+--rollback DROP TABLE Users;
 
---changeset mate.axademy:5 labels:0.0.3
+--changeset mate.academy:5 labels:0.0.3
 CREATE INDEX idx_email ON Users(EMail);
---rollback DROP INDEX Users.idx_email
+--rollback DROP INDEX idx_email ON Users;
